@@ -8,9 +8,11 @@
  */
 void swap_nodes(listint_t **head, listint_t **node1, listint_t *node2)
 {
-    /* Update next pointers */
-    (*node1)->next = node2->next;
-    if (node2->next != NULL)
+
+    	/* Update next pointers */
+    	(*node1)->next = node2->next;
+    
+	if (node2->next != NULL)
         node2->next->prev = *node1;
 
     /* Update prev pointers */
