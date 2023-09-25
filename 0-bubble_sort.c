@@ -28,6 +28,7 @@ void bubble_sort(int *array, size_t size)
 	int prev_swap;
 	size_t i, j, k;
 	(void)k;
+	(void) prev_swap;
 
 	for (i = 0; i < size - 1; i++)
 	{
@@ -39,16 +40,8 @@ void bubble_sort(int *array, size_t size)
 			{
 				swap(&array[j], &array[j + 1]);
 				prev_swap = 1; /**Set the flag to 1 to indicate a swap*/
+				print_array(array, size);
 			}
 		}
-		/** if no swap occured the the array is already sorted */
-		if (prev_swap == 0)
-		{
-			break;
-		}
-		print_array(array, size);
-
-		/**Print the array after each pass*/
-
 	}
 }
