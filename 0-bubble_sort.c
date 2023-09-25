@@ -30,6 +30,9 @@ void bubble_sort(int *array, size_t size)
 	(void)k;
 	(void) prev_swap;
 
+	if (array == NULL || size < 2)
+		return;
+
 	for (i = 0; i < size - 1; i++)
 	{
 		prev_swap = 0; /**Flag to check if any swap occurs in this pass*/
