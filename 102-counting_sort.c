@@ -42,13 +42,7 @@ void counting_sort(int *array, size_t size)
 	}
 
 	max = find_max(array, size);
-
 	counting_array = (int *)malloc((max + 1) * sizeof(int));
-
-	if (counting_array == NULL)
-	{
-		return;
-	}
 
 	for (i = 0; i <= max; i++)
 	{
